@@ -1,0 +1,11 @@
+<%- include('partials/header.ejs') %>
+    <div class="bg-body-bg flex flex-row flex-grow items-center justify-evenly flex-wrap">
+        <% posts.forEach(post=>{ %>
+            <div class="bg-white w-96 h-56 mb-4 flex flex-col gap-2 p-4 rounded-lg my-4">
+                <h1 class="font-[700] text-center"><%= post.blogHeading.toUpperCase() %></h1>
+                <p class="font-[500] overflow-y-scroll"><%= post.blogContent.slice(0,150)+"..." %></p>
+                <a class="text-blue-500 text-[18px] font-[500]" href="/view-post/<%=post.id%>">Read More..</a>
+            </div>
+        <%})%>
+    </div>
+<%- include('partials/footer.ejs') %>

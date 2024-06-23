@@ -1,0 +1,9 @@
+<%- include('partials/header.ejs') %>
+    <div class="bg-body-bg flex flex-col flex-grow items-center justify-center">
+        <form class="flex flex-col items-center justify-center gap-3" action="/update-blog/<%=post.id%>" method="post">
+            <input class="w-[900px] h-12" name="blogHeading" type="text" value="<%=post.blogHeading%>">
+            <textarea class="w-[900px] h-[350px]" name="blogContent" type="text"><%=post.blogContent%></textarea>
+            <button class="bg-blue-400 w-24 h-9 rounded-lg font-semibold" type="submit">Update</button>
+        </form>
+    </div>
+<%- include('partials/footer.ejs') %>

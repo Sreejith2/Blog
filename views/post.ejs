@@ -1,0 +1,16 @@
+<%- include('partials/header.ejs') %>
+    <div class="bg-body-bg flex flex-col flex-grow items-center justify-center">
+        <div class="bg-white min-h-[450px] w-[900px] flex flex-col gap-5 p-4 m-9 ">
+            <h1 class="font-[700] text-2xl text-center"><%= post.blogHeading %></h1>
+            <p class="text-xl font-[450]"><%= post.blogContent%></p>
+        </div>
+        <div class="flex flex-row w-[900px] mt-3 items-center justify-evenly mb-9">
+            <form action="/edit/<%=post.id%>" method="get">
+                <button class="bg-blue-400 w-24 h-9 rounded-lg font-semibold" type="submit">Edit</button>
+            </form>
+            <form action="/delete/<%=post.id%>" method="GET">
+                <button class="bg-blue-400 w-24 h-9 rounded-lg font-semibold" type="submit">Delete</button>
+            </form>
+        </div>
+    </div>
+<%- include('partials/footer.ejs') %>
