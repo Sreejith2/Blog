@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "build": "concurrently \"nodemon index.js\" \"npm run dev:css\"",
     "dev": "concurrently \"nodemon index.js\" \"npm run dev:css\"",
     "dev:css": "tailwindcss -i ./public/index.css -o ./public/output.css --watch"
   },
